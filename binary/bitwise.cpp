@@ -14,24 +14,31 @@ int main()
 
 	cout << "a & b  = " << bitset<8>(a & b)
 	     << "  (1 only where both are 1)\n";
+	// 00001100 a
+	// 00001010 b
 	// 00001000
 
 	cout << "a | b  = " << bitset<8>(a | b) << "  (1 where either is 1)\n";
+	// 00001100 a
+	// 00001010 b
 	// 00001110
 
 	cout << "a ^ b  = " << bitset<8>(a ^ b) << "  (1 where they differ)\n";
+	// 00001100 a
+	// 00001010 b
 	// 00000110
 
 	cout << "~a     = " << bitset<8>(static_cast<unsigned char>(~a))
 	     << "  (flip every bit)\n";
-
-	// 00001100 *
-	// 00001010 *
+	// 00001100 a
+	// 00001010 b
 	// 11110011
 
 	cout << "a << 2 = " << bitset<8>(a << 2) << "  (same as a * 4)\n";
+	// 00001100 a
 	// 00110000
 
 	cout << "a >> 2 = " << bitset<8>(a >> 2) << "  (same as a / 4)\n";
+	// 00001100 a
 	// 00000011
 }
